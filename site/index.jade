@@ -1,7 +1,14 @@
 !!! 5
 html
   head
+    title Lianna &amp; Nat
     link(href="css/styles.css", rel="stylesheet")
+    script(src="http://code.jquery.com/jquery-2.0.3.min.js")
     script(src="js/scripts.js")
   body
-    h1 Hello, Lianna Wedsite
+    #wrap
+      nav
+        include includes/nav
+      .content
+        .img-wrap
+          img(src="img/together.png", alt="Lianna &amp; Nat")

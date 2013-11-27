@@ -1,0 +1,44 @@
+!!! 5
+html
+  head
+    title Lianna &amp; Nat
+    link(href="css/styles.css", rel="stylesheet")
+    script(src="http://code.jquery.com/jquery-2.0.3.min.js")
+    script(src="js/bootstrap.min.js")
+    script(src="js/scripts.js")
+  body
+    #wrap
+      nav
+        include includes/nav
+      .content.travel
+        h1 RSVP
+        section.body
+          p Please  RSVP as soon as possible. Just fill out the information below.  Please be sure include choice of dinner for each 
+            |person so you can have your preference. Otherwise, you will get a surprise dinner. 
+          form#rsvp-form(action="php/rsvp.php")
+            .row
+              label No. of Guests
+              input.small(type="text")
+            .row
+              label Your Email
+              input(type="text")
+            .row
+              label Name
+              input(type="text")
+              .meal-choice
+                .meal.beef(data-meal="beef",title="Filet Mignon: 7oz. filet served with a Cabernet Sauvignon Demi-Glaze") Beef
+                .meal.chicken(data-meal="chicken",title="Tomato Sage Chicken: Breaded Crisp Chicken Breast with a Tomato Butter Sauce infused with Basil and Sage") Chicken
+                .meal.fish(data-meal="fish", title="Halibut Calabrese: Pan-Seared and served with Fresh Tomatoes marinated in Balsamic Vinegar and Basil") Fish
+                .meal.vegetarian(data-meal="veggie",title="Vegetable Lasagna: Layered with Grilled Vegetables, Mozzarella, Ricotta, and Parmesan Cheese") Veggie
+                .meal.kids-meal(data-meal="kids",title="Kids menu: Chicken Fingers, French Fries, and Corn") Kids
+                                              
+
+
+          input(type="submit", value="Submit")                                                                                               
+
+
+                
+
+
+        
+          
