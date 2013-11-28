@@ -22,7 +22,7 @@ module.exports =function(grunt){
         },
         img:{
           files: ['site/images/*'],
-          tasks: ['imagemin']
+          tasks: ['copy']
         }
       },
       coffee:{
@@ -60,7 +60,13 @@ module.exports =function(grunt){
             cwd: 'site/php',
             src: '*',
             dest: 'build/php'
-          }
+          },
+          {
+            expand: true,
+            cwd: 'site/fonts',
+            src: '*',
+            dest: 'build/fonts'
+          }          
           ]
         },
       },
