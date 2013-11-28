@@ -2,11 +2,8 @@ $ ->
   $('#logo').click ->
     window.location.href = "index.html"
 
-  $('.meal').tooltip()
-    # position:  
-    #   my: "left+15 center"
-    #   at: "right center" 
-    # )
+  $('.meal').tooltip({html:true})
+
 
   $('.meal').click ->
     $(@).addClass 'chosen'
