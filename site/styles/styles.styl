@@ -43,7 +43,7 @@ body
 h1 
   text-align  center
   font-family 'Lavanderia'
-  font-size   30px
+  font-size   36px
   color       $gray-text
   margin      40px 0 15px
 h2
@@ -55,6 +55,13 @@ strong
   text-transform uppercase
 em
   font-weight bold
+a
+  color $gray-text
+  text-decoration none
+  &:hover
+    text-decoration underline
+.offset
+  text-indent 1em
 
 //Nav
 #main-nav
@@ -84,6 +91,7 @@ em
       text-align      center
       display         block
       line-height     52px
+      &.active
       &:hover
         // background url(../img/nav-hover.png) center 0 no-repeat $gray-hover
         background $gray-hover
@@ -109,22 +117,90 @@ em
   box-sizing    border-box
   border-radius 2px
   position      relative
+.card-wrap
+  width 911px
+  margin 0 auto
+.card-top
+  background url(../img/pink-top.png) no-repeat
+  width      auto
+  height     14px
+.card-body
+  background url(../img/pink-body.png) repeat-y
+  width      auto
+  padding    20px 28px
+.card-bot
+  background url(../img/pink-bot.png) no-repeat
+  width      auto
+  height     12px
 .well
   background    $beige
   border        solid 1px $beige-stroke
   border-radius 5px
   overflow      hidden
   padding       10px
+  box-shadow inset 0 1px 0 $beige-stroke
+  margin 20px 0 0
 
 .map
   float left
 .info
   float right
   width 220px
+  &>p
+    margin-bottom 10px
 
 //Home
 .img-wrap
   margin 42px auto 0
+
+//Wedding & Travel
+.label-hotel
+.label-rates
+.label-parking
+.label-reserve
+.label-discount
+.label-date
+.label-time
+.label-location
+.label-attire
+  padding-left 75px
+  position     relative
+  &:before
+    font-weight bold
+    content     ""
+    position    absolute
+    left        0
+    font-size   12px
+
+
+.label-hotel
+  &:before
+    content "HOTEL:"
+.label-rates
+  &:before 
+    content "RATES:"
+.label-parking
+  &:before
+    content "PARKING:"
+.label-reserve
+  &:before
+    content "RESERVE:"
+.label-discount
+  &:before
+    content "DISCOUNT:"
+.label-date
+  &:before
+    content "DATE:"
+.label-time
+  &:before
+    content "TIME:"
+.label-location
+  &:before
+    content "LOCATION:"
+.label-attire
+  padding-left 110px
+  &:before
+    content "DRESS ATTIRE:"
 
 
 //Registry
@@ -228,7 +304,15 @@ input[type="text"]
   position     relative
   &.chosen
     background blue
+
 //Buttons
+.btn-rsvp
+  display       block
+  text-indent   -9999px
+  background    url(../img/btn-rsvp.png) no-repeat
+  width         142px
+  height        43px
+  margin-bottom 10px
 
 //Tooltips
 .tooltip

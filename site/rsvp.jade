@@ -9,7 +9,12 @@ html
   body
     #wrap
       nav
-        include includes/nav
+        ul#main-nav
+          li.nav-wedding: a(href="the-wedding.html") The Wedding
+          li.nav-travel: a(href="travel.html") Travel
+          li.nav-logo: #logo Lianna &amp; Nat
+          li.nav-registry: a(href="registry.html") Registry
+          li.nav-rsvp: a.active(href="rsvp.html") RSVP
       .content.travel
         h1 RSVP
         section.body
