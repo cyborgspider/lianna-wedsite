@@ -12,16 +12,17 @@ html
       .content.registry
         h1 Our Registry
         section.body
-          .registry-list
-            .col
-              h2 Our registry listings:
-              a(href="#") Amazon.com
-              a(href="#") Williams-Sonoma
-            .col
-              h2 Alternative methods are listed below:
-              a(href="#") Amazon Payments
-              a(href="#") Google Wallet
-              a(href="#") Chase QuickPay
+          .col.first
+            h2 Our registry listings:
+            ul.stores
+              li: a.link-amazon(href="#") Amazon.com
+              li.last: a.link-ws(href="#") Williams-Sonoma
+          .col
+            h2 Alternative methods are listed below:
+            ul.stores
+              li: a.link-ap(href="#") Amazon Payments
+              li: a.link-google(href="#") Google Wallet
+              li.last.tall: a.link-chase(href="#") Chase QuickPay
                 
 
 
