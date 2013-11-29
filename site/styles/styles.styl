@@ -325,15 +325,61 @@ input[type="text"]
     background #fff
   &.small
     width 40px
+  &.error
+    border-color red
+
+
+.bot-form
+  padding 15px 0 0
+
+.meal-choice
+  padding-left 22px
+  margin-left  35px
+  border-left  solid 1px $gray-stroke
+  float        left
 
 .meal
-  background   pink
-  display      inline-block
-  margin-right 10px
-  cursor       pointer
-  position     relative
-  &.chosen
-    background blue
+  background     url(../img/meal-sprite.png) no-repeat
+  display        inline-block
+  cursor         pointer
+  position       relative
+  text-indent    -9999px
+  vertical-align middle
+
+  &.beef
+    width 49px
+    height 32px
+    background-position 0 0
+    &.chosen
+      background-position -49px 0
+  &.chicken
+    width 32px
+    height 37px
+    background-position 0 -32px
+    margin-left 5px
+    &.chosen
+      background-position -32px -32px
+  &.fish
+    width 49px
+    height 34px
+    background-position 0 -69px
+    margin-left 5px
+    &.chosen
+      background-position -49px -69px
+  &.vegetarian
+    width 39px
+    height 39px
+    background-position 0 -103px
+    margin-left 5px
+    &.chosen
+      background-position -49px -103px
+  &.kids-meal
+    width               80px
+    height              20px
+    background-position 0 -142px
+    margin-left         10px
+    &.chosen
+      background-position -80px -142px 
 
 //Buttons
 .btn-rsvp
