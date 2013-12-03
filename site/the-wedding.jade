@@ -1,41 +1,21 @@
-!!! 5
-html
-  head
-    title Lianna &amp; Nat
-    link(href="css/styles.css", rel="stylesheet")
-    link(href="favicon.ico", rel="shortcut icon", type="image/x-icon")
-    script(src="http://code.jquery.com/jquery-2.0.3.min.js")
-    script(src="js/scripts.js")
-  body
-    #wrap
-      nav
-        ul#main-nav
-          li.nav-wedding: a.active(href="the-wedding.html") The Wedding
-          li.nav-travel: a(href="travel.html") Travel
-          li.nav-logo: #logo Lianna &amp; Nat
-          li.nav-registry: a(href="registry.html") Registry
-          li.nav-rsvp: a(href="rsvp.html") RSVP
-      .content
-        h1 Wedding Details
-        .card-wrap
-          .card-top
-          .card-body
-            p You are invited to gather with us to enjoy a condensed but meaningful ceremony which is relatively traditional.
-            p After our vows, we will have an hour long cocktail celebration followed by dinner.
-            p Make sure to PICK YOUR MENU when you are RSVPing for you and your guests.
-            article.well
-              .map
-                <iframe width="594" height="262" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=801+E+Peltason+Dr,+Irvine,+CA&amp;aq=0&amp;oq=801+E+Peltason+D&amp;sll=33.687,-117.774252&amp;sspn=0.399939,0.531464&amp;ie=UTF8&amp;hq=&amp;hnear=801+E+Peltason+Dr,+Irvine,+California+92697&amp;t=m&amp;ll=33.652137,-117.839355&amp;spn=0.018719,0.050898&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
-              .info
-                p.label-date February 22, 2014
-                p.label-time 4pm PST
-                p.label-location UC Irvine, University Club<br>801 E Peltason Dr.<br>Irvine, CA
-                p.label-attire Formal
-                a(href="rsvp.html").btn-rsvp RSVP
-                p Have you already RSVPed and need to change your menu?
-                p <em><a href="mailto:liannak@gmail.com">Email us</a></em>
-          .card-bot
-
-
-
-
+extends includes/master
+block content
+    h1 Wedding Details
+    .card-wrap
+      .card-top
+      .card-body
+        p You are invited to gather with us to enjoy a condensed but meaningful ceremony which is relatively traditional.
+        p After our vows, we will have an hour long cocktail celebration followed by dinner.
+        p Make sure to PICK YOUR MENU when you are RSVPing for you and your guests.
+        article.well
+          .map
+            <iframe width="594" height="262" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=801+E+Peltason+Dr,+Irvine,+CA&amp;aq=0&amp;oq=801+E+Peltason+D&amp;sll=33.687,-117.774252&amp;sspn=0.399939,0.531464&amp;ie=UTF8&amp;hq=&amp;hnear=801+E+Peltason+Dr,+Irvine,+California+92697&amp;t=m&amp;ll=33.652137,-117.839355&amp;spn=0.018719,0.050898&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+          .info
+            p.label-date February 22, 2014
+            p.label-time 4pm PST
+            p.label-location UC Irvine, University Club<br>801 E Peltason Dr.<br>Irvine, CA
+            p.label-attire Formal
+            a(href="rsvp.html").btn-rsvp RSVP
+            p Have you already RSVPed and need to change your menu?
+            p <em><a href="mailto:contact@liannaandnat.com">Email us</a></em>
+      .card-bot

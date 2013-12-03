@@ -40,20 +40,21 @@ $beige-stroke = #e9e9e9
     font-weight normal
     font-style normal
 
-
 //Base Styles
 html
-  background url(../img/flowers-1600.png) no-repeat center bottom $gray
   height 100%
 body
   font       14px/1.5 "Helvetica", "Arial", sans-serif
-  background url(../img/bg.png) repeat-x center top
+  background $gray url(../img/flowers-1600.png) no-repeat center bottom
+  background-size 100%
   color      $gray-text
   height     100%
-  min-height 780px
-
+  min-width 1080px
 #wrap
-  width 1020px
+  background url(../img/bg.png) repeat-x center top
+  min-width 1080px
+nav, .content
+  width 1080px
   margin 0 auto
 
 //Typography
@@ -79,10 +80,12 @@ a
     text-decoration underline
 .offset
   text-indent 1em
-
+.thanks
+  text-align center
+  padding 150px 0
 //Nav
 #main-nav
-  width 100%
+  width 1015px
   padding 50px 20px 13px
   font-family Abraham
   overflow hidden
@@ -125,7 +128,7 @@ a
 
 //Shared Subpage Components
 .content
-  clear both
+  overflow auto
 .body
   width         890px
   margin        0 auto
@@ -168,7 +171,7 @@ a
 
 //Home
 .img-wrap
-  margin 42px auto 0
+  margin 42px auto 0 auto
 
 //Wedding & Travel
 .label-hotel
@@ -291,12 +294,13 @@ a
   border solid 3px $gray-stroke
 
 #rsvp-form
-  background    linear-gradient(top, #f9f3f5, #eae4e6)
-  padding       18px
-  border        solid 1px $beige
-  box-shadow    inset 0 1px 0 $beige-stroke
-  border-radius 3px
-  margin 10px auto 20px
+  .pretty
+    background    linear-gradient(top, #f9f3f5, #eae4e6)
+    padding       18px
+    border        solid 1px $beige
+    box-shadow    inset 0 1px 0 $beige-stroke
+    border-radius 3px
+    margin 10px auto 20px
 
 .row
   clear         both
@@ -446,5 +450,13 @@ input[type="text"]
   border-color transparent
   border-style solid
 
+@media screen and (max-width: 1079px)
+  body
+    background-size 1080px
+    background-position 0 bottom
 
+@media screen and (min-width: 1600px)
+  body
+    background-size initial
+    background-repeat repeat-x
 

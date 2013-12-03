@@ -1,15 +1,4 @@
-!!! 5
-html
-  head
-    title Lianna &amp; Nat
-    link(href="css/styles.css", rel="stylesheet")
-    link(href="favicon.ico", rel="shortcut icon", type="image/x-icon")
-    script(src="http://code.jquery.com/jquery-2.0.3.min.js")
-    script(src="js/scripts.js")
-  body
-    #wrap
-      nav
-        include includes/nav
-      .content
-        .img-wrap
-          img(src="img/together.png", alt="Lianna &amp; Nat")
+extends includes/master
+block content
+    .img-wrap
+      img(src="img/together.png", alt="Lianna &amp; Nat")
