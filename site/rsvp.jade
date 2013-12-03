@@ -23,24 +23,24 @@ html
             .top-form
               .row
                 label.large No. of Guests
-                input.small(type="text")
+                input#number.small(name="guest_number", type="text")
               .row
                 label.large Your Email
-                input(type="text")
+                input(type="text", name="guest_email")
             .bot-form
               .row
                 label Name
-                input(type="text")
+                input.guestName(type="text", name="guest_name")
                 .meal-choice
                   .meal.beef(data-meal="beef",title="Filet Mignon:<br> 7oz. filet served with a Cabernet Sauvignon Demi-Glaze") Beef
                   .meal.chicken(data-meal="chicken",title="Tomato Sage Chicken:<br> Breaded Crisp Chicken Breast with a Tomato Butter Sauce infused with Basil and Sage") Chicken
                   .meal.fish(data-meal="fish", title="Halibut Calabrese:<br> Pan-Seared and served with Fresh Tomatoes marinated in Balsamic Vinegar and Basil") Fish
                   .meal.vegetarian(data-meal="veggie",title="Vegetable Lasagna:<br> Layered with Grilled Vegetables, Mozzarella, Ricotta, and Parmesan Cheese") Veggie
                   .meal.kids-meal(data-meal="kids",title="Kids menu:<br> Chicken Fingers, French Fries, and Corn") Kids
-                                              
+                input.mealChoice(type="hidden", name="meal-choice")
 
 
-          input.btn-submit(type="submit", value="Submit")                                                                                               
+          input.btn-submit(type="submit", value="Submit")
 
 
                 
