@@ -40,6 +40,7 @@ a:hover{text-decoration:underline}
 .img-wrap{margin:42px auto 0}
 .label-hotel,.label-rates,.label-parking,.label-reserve,.label-discount,.label-date,.label-time,.label-location,.label-attire{padding-left:75px;position:relative;}
 .label-hotel:before,.label-rates:before,.label-parking:before,.label-reserve:before,.label-discount:before,.label-date:before,.label-time:before,.label-location:before,.label-attire:before{font-weight:bold;content:"";position:absolute;left:0;font-size:12px}
+.label-hotel a{text-decoration:underline}
 .label-hotel:before{content:"HOTEL:"}
 .label-rates:before{content:"RATES:"}
 .label-parking:before{content:"PARKING:"}
