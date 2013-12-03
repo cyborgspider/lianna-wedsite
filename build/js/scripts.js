@@ -1,5 +1,31 @@
 (function() {
   $(function() {
+    var validate;
+    validate = function() {
+      var errors, isValid, mealError;
+      mealError = false;
+      isValid = true;
+      $('.error-message').html('');
+      $('.validate').each(function() {
+        if (!$(this).val()) {
+          $(this).addClass('error').on('focus', function() {
+            return $(this).removeClass('error');
+          });
+          isValid = false;
+          if ($(this).hasClass('mealChoice')) {
+            return mealError = true;
+          }
+        }
+      });
+      errors = $('input.error:not(.mealChoice)').length;
+      if (errors) {
+        $('.error-message').removeClass('dn').append('Please fill out the missing field' + (errors > 1 ? 's' : '' + '.'));
+      }
+      if (mealError) {
+        $('.error-message').removeClass('dn').append('<br />Please indicate a meal choice.');
+      }
+      return isValid;
+    };
     if ($("li a[href='" + (location.pathname.slice(1)) + "']").length) {
       $("li a[href='" + (location.pathname.slice(1)) + "']").addClass('active');
     }
@@ -34,10 +60,16 @@
         return $(".bot-form .row:nth-child(" + num + ")").nextUntil().remove();
       }
     });
-    return $('.bot-form').on('click', '.meal', function() {
+    $('.bot-form').on('click', '.meal', function() {
       $(this).parent().siblings('.mealChoice').val($(this).data('meal'));
       $(this).addClass('chosen');
       return $(this).siblings().removeClass('chosen');
+    });
+    return $('.btn-submit').on('click', function(e) {
+      e.preventDefault();
+      if (validate()) {
+        return $('#rsvp-form').submit();
+      }
     });
   });
 
