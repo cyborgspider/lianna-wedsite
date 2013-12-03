@@ -29,20 +29,21 @@
           </p>
           <form id="rsvp-form" action="php/rsvp.php" method="POST">
             <div class="pretty">
+              <div class="error-message dn"></div>
               <div class="top-form">
                 <div class="row">
                   <label class="large">No. of Guests</label>
-                  <input id="number" name="guest_number" type="text" class="small">
+                  <input id="number" name="guest_number" type="text" class="small validate">
                 </div>
                 <div class="row">
                   <label class="large">Your Email</label>
-                  <input type="text" name="guest_email">
+                  <input type="text" name="guest_email" class="validate">
                 </div>
               </div>
               <div class="bot-form">
                 <div class="row">
                   <label>Name</label>
-                  <input type="text" name="guest[0][name]" class="guestName">
+                  <input type="text" name="guest[0][name]" class="guestName validate">
                   <div class="meal-choice">
                     <div data-meal="beef" title="Filet Mignon:&lt;br&gt; 7oz. filet served with a Cabernet Sauvignon Demi-Glaze" class="meal beef">Beef</div>
                     <div data-meal="chicken" title="Tomato Sage Chicken:&lt;br&gt; Breaded Crisp Chicken Breast with a Tomato Butter Sauce infused with Basil and Sage" class="meal chicken">Chicken</div>
@@ -50,11 +51,11 @@
                     <div data-meal="veggie" title="Vegetable Lasagna:&lt;br&gt; Layered with Grilled Vegetables, Mozzarella, Ricotta, and Parmesan Cheese" class="meal vegetarian">Veggie</div>
                     <div data-meal="kids" title="Kids menu:&lt;br&gt; Chicken Fingers, French Fries, and Corn" class="meal kids-meal">Kids</div>
                   </div>
-                  <input type="hidden" name="guest[0][meal]" class="mealChoice">
+                  <input type="hidden" name="guest[0][meal]" class="mealChoice validate">
                 </div>
               </div>
             </div>
-            <input type="submit" value="Submit" class="btn-submit">
+            <input type="button" value="Submit" class="btn-submit">
           </form>
         </section>
       </div>

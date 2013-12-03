@@ -11,6 +11,7 @@ html{height:100%}
 body{font:14px/1.5 "Helvetica","Arial",sans-serif;background:#e1e0e0 url("../img/flowers-1600.png") no-repeat center bottom;-webkit-background-size:100%;-moz-background-size:100%;background-size:100%;color:#4d4d4d;height:100%;min-width:1080px}
 #wrap{background:url("../img/bg.png") repeat-x center top;min-width:1080px}
 nav,.content{width:1080px;margin:0 auto}
+.dn{display:none}
 h1{text-align:center;font-family:'Lavanderia';font-size:36px;color:#4d4d4d;margin:40px 0 15px}
 h2{font-family:"Abraham";font-size:26px;margin-bottom:10px}
 strong{font-weight:bold;text-transform:uppercase}
@@ -78,7 +79,8 @@ label.large{width:120px}
 input[type="text"]{float:left;background:#f0f0f0;border:solid 1px #c5c5c5;width:370px;height:36px;padding:0 10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-size:14px;}
 input[type="text"]:focus{outline:none;background:#fff}
 input[type="text"].small{width:40px}
-input[type="text"].error{border-color:#f00}
+input[type="text"].error{border-color:#ff6ec0}
+.error-message{height:40px;text-align:center;font-weight:700;color:#ff6ec0}
 .bot-form{padding:15px 0 0}
 .meal-choice{padding-left:22px;margin-left:35px;border-left:solid 1px #c5c5c5;float:left}
 .meal{background:url("../img/meal-sprite.png") no-repeat;display:inline-block;cursor:pointer;position:relative;text-indent:-9999px;vertical-align:middle;}

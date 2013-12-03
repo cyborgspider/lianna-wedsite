@@ -1,4 +1,20 @@
 $ ->
+  validate = () ->
+    mealError = false
+    isValid = true
+    $('.error-message').html ''
+    $('.validate').each ->
+      if !$(@).val()
+        $(@).addClass('error').on 'focus', () -> $(@).removeClass 'error'
+        isValid = false
+        mealError = true if $(@).hasClass 'mealChoice'
+    errors = $('input.error:not(.mealChoice)').length
+    if errors
+      $('.error-message').removeClass('dn').append 'Please fill out the missing field' + if errors > 1 then 's' else '' + '.'
+    if mealError
+      $('.error-message').removeClass('dn').append '<br />Please indicate a meal choice.'
+    return isValid
+
   $("li a[href='#{location.pathname.slice(1)}']").addClass('active') if $("li a[href='#{location.pathname.slice(1)}']").length
 
   $('#logo').click ->
@@ -25,3 +41,6 @@ $ ->
     $(@).addClass 'chosen'
     $(@).siblings().removeClass 'chosen'
 
+  $('.btn-submit').on 'click', (e) ->
+    e.preventDefault()
+    $('#rsvp-form').submit() if validate()
