@@ -49,13 +49,14 @@ body
   background-size 100%
   color      $gray-text
   height     100%
-  min-height 780px
-
+  min-width 1080px
 #wrap
   background url(../img/bg.png) repeat-x center top
+  min-width 1080px
 nav, .content
-  width 1028px
+  width 1080px
   margin 0 auto
+
 //Typography
 h1
   text-align  center
@@ -79,10 +80,12 @@ a
     text-decoration underline
 .offset
   text-indent 1em
-
+.thanks
+  text-align center
+  padding 150px 0
 //Nav
 #main-nav
-  width 100%
+  width 1015px
   padding 50px 20px 13px
   font-family Abraham
   overflow hidden
@@ -168,7 +171,7 @@ a
 
 //Home
 .img-wrap
-  margin 42px auto 0
+  margin 42px auto 0 auto
 
 //Wedding & Travel
 .label-hotel
@@ -291,12 +294,13 @@ a
   border solid 3px $gray-stroke
 
 #rsvp-form
-  background    linear-gradient(top, #f9f3f5, #eae4e6)
-  padding       18px
-  border        solid 1px $beige
-  box-shadow    inset 0 1px 0 $beige-stroke
-  border-radius 3px
-  margin 10px auto 20px
+  .pretty
+    background    linear-gradient(top, #f9f3f5, #eae4e6)
+    padding       18px
+    border        solid 1px $beige
+    box-shadow    inset 0 1px 0 $beige-stroke
+    border-radius 3px
+    margin 10px auto 20px
 
 .row
   clear         both
@@ -446,7 +450,10 @@ input[type="text"]
   border-color transparent
   border-style solid
 
-
+@media screen and (max-width: 1079px)
+  body
+    background-size 1080px
+    background-position 0 bottom
 
 @media screen and (min-width: 1600px)
   body

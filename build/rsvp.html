@@ -6,7 +6,7 @@
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -18,7 +18,7 @@
             <div id="logo">Lianna &amp; Nat</div>
           </li>
           <li class="nav-registry"><a href="registry.html">Registry</a></li>
-          <li class="nav-rsvp"><a href="rsvp.html" class="active">RSVP</a></li>
+          <li class="nav-rsvp"><a href="rsvp.html">RSVP</a></li>
         </ul>
       </nav>
       <div class="content">
@@ -27,33 +27,35 @@
             Please  RSVP as soon as possible. Just fill out the information below.  Please be sure include choice of dinner for each
             person so you can have your preference. Otherwise, you will get a surprise dinner.
           </p>
-          <form id="rsvp-form" action="php/rsvp.php">
-            <div class="top-form">
-              <div class="row">
-                <label class="large">No. of Guests</label>
-                <input id="number" name="guest_number" type="text" class="small">
-              </div>
-              <div class="row">
-                <label class="large">Your Email</label>
-                <input type="text" name="guest_email">
-              </div>
-            </div>
-            <div class="bot-form">
-              <div class="row">
-                <label>Name</label>
-                <input type="text" name="guest_name" class="guestName">
-                <div class="meal-choice">
-                  <div data-meal="beef" title="Filet Mignon:&lt;br&gt; 7oz. filet served with a Cabernet Sauvignon Demi-Glaze" class="meal beef">Beef</div>
-                  <div data-meal="chicken" title="Tomato Sage Chicken:&lt;br&gt; Breaded Crisp Chicken Breast with a Tomato Butter Sauce infused with Basil and Sage" class="meal chicken">Chicken</div>
-                  <div data-meal="fish" title="Halibut Calabrese:&lt;br&gt; Pan-Seared and served with Fresh Tomatoes marinated in Balsamic Vinegar and Basil" class="meal fish">Fish</div>
-                  <div data-meal="veggie" title="Vegetable Lasagna:&lt;br&gt; Layered with Grilled Vegetables, Mozzarella, Ricotta, and Parmesan Cheese" class="meal vegetarian">Veggie</div>
-                  <div data-meal="kids" title="Kids menu:&lt;br&gt; Chicken Fingers, French Fries, and Corn" class="meal kids-meal">Kids</div>
+          <form id="rsvp-form" action="php/rsvp.php" method="POST">
+            <div class="pretty">
+              <div class="top-form">
+                <div class="row">
+                  <label class="large">No. of Guests</label>
+                  <input id="number" name="guest_number" type="text" class="small">
                 </div>
-                <input type="hidden" name="meal-choice" class="mealChoice">
+                <div class="row">
+                  <label class="large">Your Email</label>
+                  <input type="text" name="guest_email">
+                </div>
+              </div>
+              <div class="bot-form">
+                <div class="row">
+                  <label>Name</label>
+                  <input type="text" name="guest[0][name]" class="guestName">
+                  <div class="meal-choice">
+                    <div data-meal="beef" title="Filet Mignon:&lt;br&gt; 7oz. filet served with a Cabernet Sauvignon Demi-Glaze" class="meal beef">Beef</div>
+                    <div data-meal="chicken" title="Tomato Sage Chicken:&lt;br&gt; Breaded Crisp Chicken Breast with a Tomato Butter Sauce infused with Basil and Sage" class="meal chicken">Chicken</div>
+                    <div data-meal="fish" title="Halibut Calabrese:&lt;br&gt; Pan-Seared and served with Fresh Tomatoes marinated in Balsamic Vinegar and Basil" class="meal fish">Fish</div>
+                    <div data-meal="veggie" title="Vegetable Lasagna:&lt;br&gt; Layered with Grilled Vegetables, Mozzarella, Ricotta, and Parmesan Cheese" class="meal vegetarian">Veggie</div>
+                    <div data-meal="kids" title="Kids menu:&lt;br&gt; Chicken Fingers, French Fries, and Corn" class="meal kids-meal">Kids</div>
+                  </div>
+                  <input type="hidden" name="guest[0][meal]" class="mealChoice">
+                </div>
               </div>
             </div>
+            <input type="submit" value="Submit" class="btn-submit">
           </form>
-          <input type="submit" value="Submit" class="btn-submit">
         </section>
       </div>
     </div>

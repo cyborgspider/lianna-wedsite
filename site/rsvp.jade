@@ -1,45 +1,26 @@
-!!! 5
-html
-  head
-    title Lianna &amp; Nat
-    link(href="css/styles.css", rel="stylesheet")
-    link(href="favicon.ico", rel="shortcut icon", type="image/x-icon")
-    script(src="http://code.jquery.com/jquery-2.0.3.min.js")
-    script(src="js/bootstrap.min.js")
-    script(src="js/scripts.js")
-  body
-    #wrap
-      nav
-        ul#main-nav
-          li.nav-wedding: a(href="the-wedding.html") The Wedding
-          li.nav-travel: a(href="travel.html") Travel
-          li.nav-logo: #logo Lianna &amp; Nat
-          li.nav-registry: a(href="registry.html") Registry
-          li.nav-rsvp: a.active(href="rsvp.html") RSVP
-      .content
-        section.body.rsvp
-          p Please  RSVP as soon as possible. Just fill out the information below.  Please be sure include choice of dinner for each
-            |person so you can have your preference. Otherwise, you will get a surprise dinner.
-          form#rsvp-form(action="php/rsvp.php")
-            .top-form
-              .row
-                label.large No. of Guests
-                input#number.small(name="guest_number", type="text")
-              .row
-                label.large Your Email
-                input(type="text", name="guest_email")
-            .bot-form
-              .row
-                label Name
-                input.guestName(type="text", name="guest_name")
-                .meal-choice
-                  .meal.beef(data-meal="beef",title="Filet Mignon:<br> 7oz. filet served with a Cabernet Sauvignon Demi-Glaze") Beef
-                  .meal.chicken(data-meal="chicken",title="Tomato Sage Chicken:<br> Breaded Crisp Chicken Breast with a Tomato Butter Sauce infused with Basil and Sage") Chicken
-                  .meal.fish(data-meal="fish", title="Halibut Calabrese:<br> Pan-Seared and served with Fresh Tomatoes marinated in Balsamic Vinegar and Basil") Fish
-                  .meal.vegetarian(data-meal="veggie",title="Vegetable Lasagna:<br> Layered with Grilled Vegetables, Mozzarella, Ricotta, and Parmesan Cheese") Veggie
-                  .meal.kids-meal(data-meal="kids",title="Kids menu:<br> Chicken Fingers, French Fries, and Corn") Kids
-                input.mealChoice(type="hidden", name="meal-choice")
-
-
-          input.btn-submit(type="submit", value="Submit")
-
+extends includes/master
+block content
+    section.body.rsvp
+      p Please  RSVP as soon as possible. Just fill out the information below.  Please be sure include choice of dinner for each
+        |person so you can have your preference. Otherwise, you will get a surprise dinner.
+      form#rsvp-form(action="php/rsvp.php", method="POST")
+        .pretty
+          .top-form
+            .row
+              label.large No. of Guests
+              input#number.small(name="guest_number", type="text")
+            .row
+              label.large Your Email
+              input(type="text", name="guest_email")
+          .bot-form
+            .row
+              label Name
+              input.guestName(type="text", name="guest[0][name]")
+              .meal-choice
+                .meal.beef(data-meal="beef",title="Filet Mignon:<br> 7oz. filet served with a Cabernet Sauvignon Demi-Glaze") Beef
+                .meal.chicken(data-meal="chicken",title="Tomato Sage Chicken:<br> Breaded Crisp Chicken Breast with a Tomato Butter Sauce infused with Basil and Sage") Chicken
+                .meal.fish(data-meal="fish", title="Halibut Calabrese:<br> Pan-Seared and served with Fresh Tomatoes marinated in Balsamic Vinegar and Basil") Fish
+                .meal.vegetarian(data-meal="veggie",title="Vegetable Lasagna:<br> Layered with Grilled Vegetables, Mozzarella, Ricotta, and Parmesan Cheese") Veggie
+                .meal.kids-meal(data-meal="kids",title="Kids menu:<br> Chicken Fingers, French Fries, and Corn") Kids
+              input.mealChoice(type="hidden", name="guest[0][meal]")
+        input.btn-submit(type="submit", value="Submit")
