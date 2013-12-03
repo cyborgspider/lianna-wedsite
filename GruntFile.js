@@ -66,7 +66,13 @@ module.exports =function(grunt){
             cwd: 'site/fonts',
             src: '*',
             dest: 'build/fonts'
-          }          
+          },
+          {
+            expand: true,
+            cwd: 'site',
+            src: 'favicon.ico',
+            dest: 'build'
+          }
           ]
         },
       },
